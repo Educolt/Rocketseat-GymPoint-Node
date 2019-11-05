@@ -8,8 +8,6 @@ class AnswerMail {
   async handle({ data }) {
     const { helpOrder } = data;
 
-    console.log(helpOrder);
-
     await Mail.sendMail({
       to: `${helpOrder.student.name} <${helpOrder.student.email}>`,
       subject: `GymPoint - Resposta da sua pergunta`,
